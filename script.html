@@ -1,0 +1,84 @@
+<script>
+    food_1_name = "Pizza"
+    food_1_price = 110.00
+    food_1_availQ = 10
+    food_2_name = "Salata"
+    food_2_price = 75.00
+    food_2_availQ = 8
+    food_3_name = "Burgher"
+    food_3_price = 55.00
+    food_3_availQ = 20
+    food_4_name = "Inghetata"
+    food_4_price = 35.00
+    food_4_availQ = 10
+    food_5_name = "Sprite"
+    food_5_price = 30.00
+    food_5_availQ = 15
+    unitPrice = "lei"
+
+    alert("-------------MENU-------------\n" +
+            "1. " + food_1_name + " " + food_1_price + "  " + unitPrice  +
+            "\n2. " + food_2_name + " " + food_2_price + " " + unitPrice +
+            "\n3. " + food_3_name + " " + food_3_price + " " + unitPrice +
+            "\n4. " + food_4_name + " " + food_4_price + " " + unitPrice +
+            "\n5. " + food_5_name + " " + food_5_price + " " + unitPrice +
+            "\n-------------MENU-------------")
+
+    food_1_quantity = parseInt(prompt(`Cite unitati de "${food_1_name}" doriti sa faceti comanda?`))
+    food_2_quantity = parseInt(prompt(`Cite unitati de "${food_2_name}" doriti sa faceti comanda?`))
+    food_3_quantity = parseInt(prompt(`Cite unitati de "${food_3_name}" doriti sa faceti comanda?`))
+    food_4_quantity = parseInt(prompt(`Cite unitati de "${food_4_name}" doriti sa faceti comanda?`))
+    food_5_quantity = parseInt(prompt(`Cite unitati de "${food_5_name}" doriti sa faceti comanda?`))
+
+    if (food_1_availQ >= food_1_quantity) {
+        cost_1 = food_1_price * food_1_quantity
+        } else {
+                alert("Ne pare rau, dar va putem oferi doar " + food_1_availQ + food_1_name)
+        }
+
+    if (food_2_availQ >= food_2_quantity) {
+        cost_2 = food_2_price * food_2_quantity
+        } else {
+                alert("Ne pare rau, dar va putem oferi doar " + food_2_availQ + food_2_name)
+        }
+
+    if (food_3_availQ >= food_3_quantity) {
+        cost_3 = food_3_price * food_3_quantity
+        } else {
+                alert("Ne pare rau, dar va putem oferi doar " + food_3_availQ + food_3_name)
+        }
+
+    if (food_4_availQ >= food_4_quantity) {
+        cost_4 = food_4_price * food_4_quantity
+        } else {
+                alert("Ne pare rau, dar va putem oferi doar " + food_4_availQ + food_4_name)
+        }
+
+    if (food_5_availQ >= food_5_quantity) {
+        cost_5 = food_5_price * food_5_quantity
+        } else {
+                alert("Ne pare rau, dar va putem oferi doar " + food_5_availQ + food_5_name)
+        }
+
+        costTotal = cost_1 + cost_2 + cost_3 + cost_4 + cost_5
+
+    if (costTotal >= 300) {
+        freeDelivery = 0.00
+    } else {
+        alert("Livrarea costa 50 lei!")
+    }
+
+        alert("-------------CEC-------------\n" +
+                "1. " + food_1_name + " " + "x" + " " + food_1_quantity + " " + "=" + " " + cost_1 + " " + unitPrice +
+                "\n2. " + food_2_name + " " + "x" + " " + food_2_quantity + " " + "=" + " " + cost_2 + " " + unitPrice +
+                "\n3. " + food_3_name + " " + "x" + " " + food_3_quantity + " " + "=" + " " + cost_3 + " " + unitPrice +
+                "\n4. " + food_4_name + " " + "x" + " " + food_4_quantity + " " + "=" + " " + cost_4 + " " + unitPrice +
+                "\n5. " + food_5_name + " " + "x" + " " + food_5_quantity + " " + "=" + " " + cost_5 + " " + unitPrice +
+                "\n-----------------------------" +
+                "\nTotal: " + costTotal + " " + unitPrice +
+                "\nLivrarea " + ":" + freeDelivery +
+                "\n-------------CEC-------------")
+
+        alert("Comanda dvs v-a fi gata in 45min\n Multumim pentru comanda!")
+
+</script>
